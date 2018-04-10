@@ -1,6 +1,10 @@
-<div id="form5">
-<%= form_tag('/memos', method: :post) do %>
-<input id="sbox5" name="s" type="text" placeholder="名前 or 苗字　カタカナ" />
-<input id="sbtn5" type="submit" value="検索" />
-<% end %>
-</div>
+
+<h2>(i)検索</h2>
+ <div id="form5">
+  <%= form_tag('/memos', method: :post) do %>
+  <input id="sbox5" name="s" type="text" placeholder="名前 or 苗字　カタカナ" />
+  <input id="sbtn5" type="submit" value="検索" />
+  <% end %>
+ </div>
+<h2>(ii)新規入力</h2>
+<%= link_to '新規入力はクリック', "/memos/new", method: :get %>
