@@ -1,13 +1,12 @@
 Rails.application.routes.draw do
- Rails.application.routes.draw do
-    root 'memos#search'
-    resources :memos, only: [:new, :create] do
-      collection do
-        get 'search'
-      end
+  root 'memos#search'
+  resources :memos, only: [:new, :create, :show] do
+    collection do
+      get 'search'
     end
+  end
 end
-end
+
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
