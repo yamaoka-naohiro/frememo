@@ -4,4 +4,8 @@ class MemosController < ApplicationController
    @memos = Memo.where('name LIKE(?)', "%#{params[:name]}%")
  end
 
+ def new
+   @memo = Memo.new
+ end
+
 end

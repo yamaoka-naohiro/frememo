@@ -1,0 +1,45 @@
+<%= form_for @memo do |f| %>
+ <div class="field">
+   <%= f.label :name, "名前" %>
+   <%= f.text_field :name %>
+ </div>
+ <div class="field">
+   <%= f.label :age, "年齢" %>
+   <%= f.text_field :age %>
+ </div>
+ <div class="field">
+   <%= f.label :job, "仕事" %>
+   <%= f.text_field :job %>
+ </div>
+ <div class="field">
+   <%= f.text_field :ITCage %>
+ </div>
+ <div class="field">
+   <%= f.label :bornplace, "出身地" %>
+   <%= f.text_field :bornplace %>
+ </div>
+ <div class="field">
+   <%= f.label :university, "大学" %>
+   <%= f.text_field :university %>
+ </div>
+ <div class="field">
+   <%= f.label :club, "部活" %>
+   <%= f.text_field :club %>
+ </div>
+ <div class="field">
+   <%= f.label :hobby, "趣味" %>
+   <%= f.text_field :hobby %>
+ </div>
+ <div class="field">
+   <%= f.label :alchol, "お酒" %>
+   <%= f.text_field :alchol %>
+ </div>
+ <div class="field">
+   <%= f.label :others, "その他" %>
+   <%= f.text_field :others %>
+ </div>
+ <div class="actions">
+   <%= f.submit :"新規登録" %>
+ </div>
+<% end %>
+
