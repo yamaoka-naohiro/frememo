@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
-    get 'memos' => 'memos#search'
-    get 'memos/new' => 'memos#new'
-end  # The priority is based upon order of creation: first created -> highest priority.
+ Rails.application.routes.draw do
+    root 'memos#search'
+    resources :memos, only: [:new, :create] do
+      collection do
+        get 'search'
+      end
+    end
+end
+end
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"

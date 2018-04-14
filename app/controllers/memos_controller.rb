@@ -8,4 +8,14 @@ class MemosController < ApplicationController
    @memo = Memo.new
  end
 
+ def create
+   Memo.create(memo_params)
+ end
+
+ private
+  def memo_params
+      params.permit(:name, :age, :job, :ITCage, :bornplace, :university, :club, :hobby, :alchol, :others)
+  end
+
+
 end
